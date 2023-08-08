@@ -1,0 +1,2 @@
+<?
+echo "Login successfull!";

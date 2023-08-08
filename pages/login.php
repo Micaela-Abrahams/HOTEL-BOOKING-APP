@@ -1,13 +1,14 @@
 <?php
+
 session_start(); // Start the session
 
-// if (isset($_POST['name'])) {
-//     $_SESSION['name'] = $_POST['name']; // Store the name in the session variable
-// } else {
-//     $_SESSION['name'] = ""; // Set a default value if the name is not provided
-// }
-// 
+if (isset($_POST['name'])) {
+    $_SESSION['name'] = $_POST['name']; // Store the name in the session variable
+} else {
+    $_SESSION['name'] = ""; // Set a default value if the name is not provided
+}
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +17,7 @@ session_start(); // Start the session
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/landingPage.css">
+    <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
 </head>
 
@@ -24,14 +25,12 @@ session_start(); // Start the session
 
     <!-- Header Section at the Top of the Page that consists of the Logo, links  & Login Button -->
     <header>
-        <h1 class="userWelcome">Welcome, <?php echo $_SESSION['name']; ?></h1>
-
-
+        <h2 class="logo">Traveltopia</h2>
         <nav class="navigation">
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
-            <button class="btnLogout-popup">Logout</button>
+            <button class="btnLogin-popup">Login</button>
         </nav>
     </header>
 
@@ -44,13 +43,13 @@ session_start(); // Start the session
         <!-- LOGIN -->
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="landingPage.php">
+            <form action="../pages/loginSuccess.php" method="post">
 
                 <!-- Name -->
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" name="name" required>
-                    <label for="name">Name</label>
+                    <input type="text" name="username" required>
+                    <label for="username">Username</label>
                 </div>
 
                 <!-- Email -->
@@ -83,21 +82,21 @@ session_start(); // Start the session
         <!-- REGISTRATION -->
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="">
+            <form action="../pages/registerSuccess.php" method="post">
 
                 <!-- Name -->
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" name="username" required>
-                    <label for="username">First Name</label>
+                    <input type="text" name="name" required>
+                    <label for="name">First Name</label>
                 </div>
 
                 <!-- Surname -->
-                <div class="input-box">
+                <!-- <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" name="username" required>
                     <label for="username">Last Name</label>
-                </div>
+                </div> -->
 
                 <!-- username -->
                 <div class="input-box">

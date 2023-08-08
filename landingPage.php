@@ -1,13 +1,13 @@
 <?php
 session_start(); // Start the session
 
-if (isset($_POST['name'])) {
-    $_SESSION['name'] = $_POST['name']; // Store the name in the session variable
-} else {
-    $_SESSION['name'] = ""; // Set a default value if the name is not provided
-}
+// if (isset($_POST['name'])) {
+//     $_SESSION['name'] = $_POST['name']; // Store the name in the session variable
+// } else {
+//     $_SESSION['name'] = ""; // Set a default value if the name is not provided
+// }
+// 
 ?>
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -16,7 +16,7 @@ if (isset($_POST['name'])) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/login.css">
+    <link rel="stylesheet" href="css/landingPage.css">
     <title>Document</title>
 </head>
 
@@ -24,12 +24,14 @@ if (isset($_POST['name'])) {
 
     <!-- Header Section at the Top of the Page that consists of the Logo, links  & Login Button -->
     <header>
-        <h2 class="logo">Traveltopia</h2>
+        <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
+
+
         <nav class="navigation">
             <a href="#">About</a>
             <a href="#">Services</a>
             <a href="#">Contact</a>
-            <button class="btnLogin-popup">Login</button>
+            <button class="btnLogout-popup">Login</button>
         </nav>
     </header>
 
