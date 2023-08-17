@@ -1,0 +1,53 @@
+/* .hotel-1-title {
+    margin-top: -500px;
+    margin-right: 100px;
+} */
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.grid-set {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-set .image-container {
+    height: 150px;
+    /* Adjust this value to your desired image height */
+    overflow: hidden;
+}
+
+.grid-set img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.row row-cols-4 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    justify-content: center;
+    gap: 20px;
+}
+
+.col {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: calc(50% - 10px);
+    /* Adjust width and gap to fit two cards side by side */
+    min-width: 300px;
+    /* Minimum width for the cards */
+    margin: 10px;
+    /* Adjust margin for spacing between cards */
+}
+
+.col {
+    max-width: 100%;
+    height: auto;
+}

@@ -66,8 +66,8 @@ header {
 }
 
 
-.navigation .btnLogin-popup {
-    width: 300px;
+.navigation .btnLogout-popup {
+    width: 200px;
     height: 50px;
     background: transparent;
     border: 2px solid black;
@@ -75,16 +75,16 @@ header {
     border-radius: 6px;
     cursor: pointer;
     font-size: 1.1em;
-    font-weight: 400;
+    font-weight: 500;
     color: black;
-    margin-left: 40px;
-    transition: .5s;
+    /* margin-left: 40px; */
+    /* transition: .5s; */
 }
 
-.navigation .btnLogin-popup:hover {
+/* .navigation .btnLogin-popup:hover {
     background: black;
     color: #162938;
-}
+} */
 
 /* .wrapper {
     position: relative;

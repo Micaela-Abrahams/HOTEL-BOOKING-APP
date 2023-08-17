@@ -83,7 +83,7 @@ header {
     font-size: 1.1em;
     font-weight: 500;
     color: black;
-    margin-left: 40px;
+    /* margin-left: 40px; */
     /* transition: .5s; */
 }
 
@@ -92,7 +92,7 @@ header {
     color: #162938;
 } */
 
-.wrapper {
+/* .wrapper {
     position: relative;
     width: 400px;
     height: 440px;
@@ -107,7 +107,7 @@ header {
     overflow: hidden;
     transform: scale(0);
     transition: transform .5s ease, height .2s ease;
-}
+} */
 
 .wrapper.active-popup {
     transform: scale(1);
@@ -283,4 +283,12 @@ header {
 .about-section {
     text-align: center;
     margin-top: 20px;
+}
+
+.go-to-hotel-btn {
+    padding: 7px 7px 7px 7px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0d6efd;
+    color: white;
 }

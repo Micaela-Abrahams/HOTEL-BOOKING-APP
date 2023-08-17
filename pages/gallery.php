@@ -96,13 +96,14 @@
 
     <!-- Header Section at the Top of the Page that consists of the Logo, links  & Login Button -->
     <header class="bg-white shadow-sm ">
-        <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
-
+        <a href="../landingPage.php" class="title-link">
+            <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
+        </a>
         <nav class="navigation">
             <a href="../landingPage.php#about">About</a>
             <a href="../pages/gallery.php">Gallery</a>
             <a href="../landingPage.php#contact">Contact</a>
-            <a href="./pages/login.php"><button class="btnLogout-popup">Login / Register</button></a>
+            <a href="./login.php"><button class="btnLogout-popup">Login / Register</button></a>
         </nav>
     </header>
 

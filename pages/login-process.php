@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         if ($password === $userRow['password']) {
             // Password is correct, proceed with login
             echo "Login successful.";
-            header("");
+            header("Location:../pages/dashboard.php");
             exit();
         } else {
             // Incorrect password

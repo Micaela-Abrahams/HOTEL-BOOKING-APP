@@ -60,6 +60,7 @@
                             <hr />
                             <h1 class="text-center">Radiant Oasis Retreat</h1>
                             <p>Unwind in the lap of nature at Radiant Oasis Retreat, where modern amenities harmonize with the natural world. Surrounded by lush landscapes and serene waters, our retreat offers a holistic experience to rejuvenate mind, body, and soul.</p>
+                            <button class="go-to-hotel-btn">Click for more</button>
                         </div>
                     </div>
                 </div>
@@ -71,6 +72,7 @@
                             <hr />
                             <h1 class="text-center">Aurora Plaza <br>Hotel</h1>
                             <p>Welcome to the vibrant world of Aurora Plaza Hotel, where modern elegance meets urban excitement. Located in the heart of the city, our hotel offers easy access to cultural landmarks, shopping districts, and a pulsating nightlife.</p>
+                            <button class="go-to-hotel-btn">Click for more</button>
                         </div>
                     </div>
                 </div>
@@ -82,6 +84,7 @@
                             <hr />
                             <h1 class="text-center">Majestic Horizons Resort</h1>
                             <p>Embark on a journey of luxury and grandeur at Majestic Horizons Resort. Set against a backdrop of rolling hills and open skies, our resort boasts opulent amenities and breathtaking vistas that redefine the meaning of indulgence.</p>
+                            <button class="go-to-hotel-btn">Click for more</button>
                         </div>
                     </div>
                 </div>
@@ -93,6 +96,7 @@
                             <hr />
                             <h1 class="text-center">Serene Haven Suites</h1>
                             <p>Immerse yourself in tranquility at Serene Haven Suites, where every stay is a peaceful escape. Nestled amidst lush gardens and offering luxurious accommodations, our hotel is the perfect haven for those seeking a serene retreat.</p>
+                            <button class="go-to-hotel-btn">Click for more</button>
                         </div>
                     </div>
                 </div>
@@ -104,6 +108,7 @@
                             <hr />
                             <h1 class="text-center">Velvet Sky Inn</h1>
                             <p>Discover comfort like never before at Velvet Sky Inn, where plush furnishings and warm ambiance create an inviting atmosphere. Whether you're here for business or leisure, our attentive staff ensures your stay is as smooth as velvet.</p>
+                            <button class="go-to-hotel-btn">Click for more</button>
                         </div>
                     </div>
                 </div>
@@ -115,6 +120,7 @@
                             <hr />
                             <h1 class="text-center">Crystal Bay Residency</h1>
                             <p>Experience the allure of Crystal Bay Residency, a coastal gem offering breathtaking ocean views from every window. With its elegant architecture and exceptional service, this hotel is a sanctuary of relaxation and sophistication.</p>
+                            <button class="go-to-hotel-btn">Click for more</button>
                         </div>
                     </div>
                 </div>
