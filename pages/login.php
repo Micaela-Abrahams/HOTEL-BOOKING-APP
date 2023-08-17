@@ -41,7 +41,7 @@
 
         <nav class="navigation">
             <a href="../landingPage.php#about">About</a>
-            <a href="#">Services</a>
+            <a href="../pages/gallery.php">Gallery</a>
             <a href="../landingPage.php#contact">Contact</a>
             <!-- <a href="#"><button class="btnLogout-popup">Login</button></a> -->
         </nav>
@@ -93,7 +93,7 @@
     <div class="card">
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="../includes/db.php" method="post">
+            <form action="../pages/registration-process.php" method="post">
 
                 <!-- Name -->
                 <div class="input-box">

@@ -4,37 +4,44 @@ ini_set('display_errors', 1);
 
 require __DIR__ . "/../includes/db.php";
 
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $userNameOrEmail = $_POST['username'];
-    $password = $_POST['password'];
+    $firstName = $_POST['firstname'];
+    $lastName = $_POST['surname'];
+    $userName = $_POST['username'];
+    $email = $_POST['email'];
+    $userPassword = $_POST['password'];
 
-    // Perform user existence check based on username or email
-    $checkStmt = $connection->prepare("SELECT id, password FROM registration_table WHERE username = ? OR email = ?");
-    $checkStmt->bind_param("ss", $userNameOrEmail, $userNameOrEmail);
+    // Check if the user already exists
+    $checkStmt = $connection->prepare("SELECT username, email FROM registration_table WHERE username = ? OR email = ?");
+    $checkStmt->bind_param("ss", $userName, $email);
     $checkStmt->execute();
     $result = $checkStmt->get_result();
 
-    if ($result->num_rows === 1) {
-        // User exists, verify password
-        $userRow = $result->fetch_assoc();
-        if ($password === $userRow['password']) {
-            // Password is correct, proceed with login
-            echo "Login successful.";
-            header("");
-            exit();
-        } else {
-            // Incorrect password
-            $loginErrorMessage = "Incorrect password";
-        }
+    if ($result->num_rows > 0) {
+        // User with the same username or email already exists
+        $errorMessage = "User with the same username or email already exists.";
     } else {
-        // User does not exist
-        $loginErrorMessage = "User does not exist, please register before attempting to login.";
+        // User doesn't exist, proceed with registration
+        $insertStmt = $connection->prepare("INSERT INTO registration_table(firstName, surname, username, email, password) VALUES(?,?,?,?,?) ");
+        $hashedPassword = password_hash($userPassword, PASSWORD_BCRYPT);
+        $insertStmt->bind_param("sssss", $firstName, $lastName, $userName, $email, $hashedPassword);
+
+        if ($insertStmt->execute()) {
+            $registrationSuccess = true;
+        } else {
+            $errorMessage = "Registration failed.";
+        }
+
+        $insertStmt->close();
     }
 
     $checkStmt->close();
 }
+
+
+
 ?>
+
 
 <!DOCTYPE html>
 <html>
@@ -71,12 +78,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 
     <form action="../pages/login.php" method="post" class="register-success">
-        <?php if (isset($loginErrorMessage)) : ?>
-            <h4><?php echo $loginErrorMessage; ?></h4>
-            <button class="register-success-login-btn">Try Again!</button>
-        <?php elseif (isset($loginErrorMessage)) : ?>
-            <h4><?php echo $loginErrorMessage; ?></h4>
-            <button class="register-success-login-btn"></button>
+        <?php if (isset($registrationSuccess) && $registrationSuccess) : ?>
+            <h4>Registration successful.</h4>
+            <button class="register-success-login-btn">Login</button>
+        <?php elseif (isset($errorMessage)) : ?>
+            <h4><?php echo $errorMessage; ?></h4>
+            <button class="register-success-login-btn">Login</button>
         <?php else : ?>
             <!-- Default form content -->
         <?php endif; ?>

@@ -58,8 +58,8 @@
                         <div class="card-body">
                             <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="" class="card-img-top" height="300px">
                             <hr />
-                            <h1 class="text-center">Image 1</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ea alias soluta earum impedit ex rem, laudantium ratione repudiandae illo recusandae in est fugit eaque deserunt quae. Rerum, assumenda delectus.</p>
+                            <h1 class="text-center">Radiant Oasis Retreat</h1>
+                            <p>Unwind in the lap of nature at Radiant Oasis Retreat, where modern amenities harmonize with the natural world. Surrounded by lush landscapes and serene waters, our retreat offers a holistic experience to rejuvenate mind, body, and soul.</p>
                         </div>
                     </div>
                 </div>
@@ -69,8 +69,8 @@
                         <div class="card-body">
                             <img src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="" class="card-img-top" height="300px">
                             <hr />
-                            <h1 class="text-center">Image 2</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas minus corrupti distinctio delectus vitae, exercitationem eum iusto quae iste nulla tempora suscipit, deleniti, totam reiciendis magni nemo eveniet quo modi.</p>
+                            <h1 class="text-center">Aurora Plaza <br>Hotel</h1>
+                            <p>Welcome to the vibrant world of Aurora Plaza Hotel, where modern elegance meets urban excitement. Located in the heart of the city, our hotel offers easy access to cultural landmarks, shopping districts, and a pulsating nightlife.</p>
                         </div>
                     </div>
                 </div>
@@ -80,8 +80,8 @@
                         <div class="card-body">
                             <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="" class="card-img-top" height="300px">
                             <hr />
-                            <h1 class="text-center">Image 3</h1>
-                            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odit, aut inventore veritatis unde eos velit maiores aperiam assumenda modi consequuntur nisi id explicabo maxime exercitationem? Totam nostrum ea nemo error.</p>
+                            <h1 class="text-center">Majestic Horizons Resort</h1>
+                            <p>Embark on a journey of luxury and grandeur at Majestic Horizons Resort. Set against a backdrop of rolling hills and open skies, our resort boasts opulent amenities and breathtaking vistas that redefine the meaning of indulgence.</p>
                         </div>
                     </div>
                 </div>
@@ -91,8 +91,8 @@
                         <div class="card-body">
                             <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" alt="" class="card-img-top" height="300px">
                             <hr />
-                            <h1 class="text-center">Image 4</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi at dicta quae veniam obcaecati. Dolorem autem at non sint sequi ratione, optio hic amet! Rem non nobis exercitationem temporibus quia.</p>
+                            <h1 class="text-center">Serene Haven Suites</h1>
+                            <p>Immerse yourself in tranquility at Serene Haven Suites, where every stay is a peaceful escape. Nestled amidst lush gardens and offering luxurious accommodations, our hotel is the perfect haven for those seeking a serene retreat.</p>
                         </div>
                     </div>
                 </div>
@@ -102,8 +102,8 @@
                         <div class="card-body">
                             <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=749&q=80" alt="" class="card-img-top" height="300px">
                             <hr />
-                            <h1 class="text-center">Image 5</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi at dicta quae veniam obcaecati. Dolorem autem at non sint sequi ratione, optio hic amet! Rem non nobis exercitationem temporibus quia.</p>
+                            <h1 class="text-center">Velvet Sky Inn</h1>
+                            <p>Discover comfort like never before at Velvet Sky Inn, where plush furnishings and warm ambiance create an inviting atmosphere. Whether you're here for business or leisure, our attentive staff ensures your stay is as smooth as velvet.</p>
                         </div>
                     </div>
                 </div>
@@ -113,8 +113,8 @@
                         <div class="card-body">
                             <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" class="card-img-top" height="300px">
                             <hr />
-                            <h1 class="text-center">Image 6</h1>
-                            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi at dicta quae veniam obcaecati. Dolorem autem at non sint sequi ratione, optio hic amet! Rem non nobis exercitationem temporibus quia.</p>
+                            <h1 class="text-center">Crystal Bay Residency</h1>
+                            <p>Experience the allure of Crystal Bay Residency, a coastal gem offering breathtaking ocean views from every window. With its elegant architecture and exceptional service, this hotel is a sanctuary of relaxation and sophistication.</p>
                         </div>
                     </div>
                 </div>
@@ -145,7 +145,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-8p-4 mb-lg-0 mb-3 bg-white rounded">
-                    <iframe class="w-100 rounded" height="320px" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d163930.96841337872!2d14.465623899999999!3d50.05966965!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b939c0970798b%3A0x400af0f66164090!2sPrague%2C%20Czechia!5e0!3m2!1sen!2sza!4v1668436119042!5m2!1sen!2sza" loading="lazy"></iframe>
+                    <iframe class="w-100 rounded" height="320px" src="https:/www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d505295.52536595665!2d114.64225366831114!3d-8.34037376105492!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd141d3e8100fa1%3A0x24910fb14b24e690!2sBali%2C%20Indonesia!5e0!3m2!1sen!2sza!4v1692263380979!5m2!1sen!2sza" loading="lazy"></iframe>
                 </div>
                 <div class="col-lg-4 col-md-4">
                     <div class="bg-white p-4 rounded mb-4">
