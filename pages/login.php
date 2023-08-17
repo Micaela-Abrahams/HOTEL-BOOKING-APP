@@ -1,12 +1,12 @@
 <?php
 
-session_start(); // Start the session
+// session_start(); // Start the session
 
-if (isset($_POST['name'])) {
-    $_SESSION['name'] = $_POST['name']; // Store the name in the session variable
-} else {
-    $_SESSION['name'] = ""; // Set a default value if the name is not provided
-}
+// if (isset($_POST['name'])) {
+//     $_SESSION['name'] = $_POST['name']; // Store the name in the session variable
+// } else {
+//     $_SESSION['name'] = ""; // Set a default value if the name is not provided
+// }
 ?>
 
 
@@ -19,33 +19,42 @@ if (isset($_POST['name'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/login.css">
     <title>Document</title>
+
+    <!-- Bootstrap Icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+
+    <!-- EXTERNAL CSS CDN LINKS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 
 <body>
-
     <!-- Header Section at the Top of the Page that consists of the Logo, links  & Login Button -->
-    <header>
-        <h2 class="logo">Traveltopia</h2>
+    <header class="bg-white shadow-sm ">
+        <a href="../landingPage.php" class="title-link">
+            <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
+        </a>
+
+
         <nav class="navigation">
-            <a href="#">About</a>
+            <a href="../landingPage.php#about">About</a>
             <a href="#">Services</a>
-            <a href="#">Contact</a>
-            <button class="btnLogin-popup">Login</button>
+            <a href="../landingPage.php#contact">Contact</a>
+            <!-- <a href="#"><button class="btnLogout-popup">Login</button></a> -->
         </nav>
     </header>
 
-    <div class="wrapper">
 
-        <span class="icon-close">
-            <ion-icon name="close"></ion-icon>
-        </span>
-
-        <!-- LOGIN -->
+    <!-- LOGIN -->
+    <div class="card">
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="../pages/loginSuccess.php" method="post">
+            <form action="../includes/db.php" method="post">
 
-                <!-- Name -->
+                <!-- Username -->
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
                     <input type="text" name="username" required>
@@ -78,25 +87,27 @@ if (isset($_POST['name'])) {
                 </div>
             </form>
         </div>
+    </div>
 
-        <!-- REGISTRATION -->
+    <!-- REGISTRATION -->
+    <div class="card">
         <div class="form-box register">
             <h2>Registration</h2>
-            <form action="../pages/registerSuccess.php" method="post">
+            <form action="../includes/db.php" method="post">
 
                 <!-- Name -->
                 <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" name="name" required>
+                    <input type="text" name="firstname" required>
                     <label for="name">First Name</label>
                 </div>
 
                 <!-- Surname -->
-                <!-- <div class="input-box">
+                <div class="input-box">
                     <span class="icon"><ion-icon name="person"></ion-icon></span>
-                    <input type="text" name="username" required>
+                    <input type="text" name="surname" required>
                     <label for="username">Last Name</label>
-                </div> -->
+                </div>
 
                 <!-- username -->
                 <div class="input-box">
@@ -131,7 +142,6 @@ if (isset($_POST['name'])) {
             </form>
         </div>
     </div>
-
 
 
     <script src="../js/script.js"></script>
