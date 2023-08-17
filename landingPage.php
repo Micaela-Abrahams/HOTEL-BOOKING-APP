@@ -39,7 +39,7 @@
 
         <nav class="navigation">
             <a href="#about">About</a>
-            <a href="#">Services</a>
+            <a href="./pages/gallery.php">Gallery</a>
             <a href="#contact">Contact</a>
             <a href="./pages/login.php"><button class="btnLogout-popup">Login / Register</button></a>
         </nav>

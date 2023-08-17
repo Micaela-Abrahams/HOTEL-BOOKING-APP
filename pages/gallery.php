@@ -35,7 +35,7 @@
             grid-template-columns: repeat(5, 1fr);
             gap: 20px;
             padding: 20px;
-            margin-top: 80px;
+            /* margin-top: 80px; */
 
         }
 
@@ -85,8 +85,8 @@
             opacity: 1;
         }
 
-        .gallery-title {
-            margin-bottom: 100px;
+        .image-grid-title {
+            margin-top: 150px;
         }
     </style>
     <title>Image Grid</title>
@@ -95,18 +95,18 @@
 <body>
 
     <!-- Header Section at the Top of the Page that consists of the Logo, links  & Login Button -->
-    <!-- <header class="bg-white shadow-sm ">
+    <header class="bg-white shadow-sm ">
         <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
 
         <nav class="navigation">
-            <a href="#about">About</a>
-            <a href="#">Services</a>
-            <a href="#contact">Contact</a>
+            <a href="../landingPage.php#about">About</a>
+            <a href="../pages/gallery.php">Gallery</a>
+            <a href="../landingPage.php#contact">Contact</a>
             <a href="./pages/login.php"><button class="btnLogout-popup">Login / Register</button></a>
         </nav>
-    </header> -->
+    </header>
 
-    <h2 class="image-grid-title">Our Beautiful Images</h2>
+    <h2 class="image-grid-title">An Array of Experiences to Indulge In Bali</h2>
 
     <div class="image-grid">
 
