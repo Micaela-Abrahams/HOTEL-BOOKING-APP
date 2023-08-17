@@ -52,7 +52,7 @@
     <div class="card">
         <div class="form-box login">
             <h2>Login</h2>
-            <form action="../includes/db.php" method="post">
+            <form action="../pages/login-process.php" method="post">
 
                 <!-- Username -->
                 <div class="input-box">

@@ -73,7 +73,7 @@ header {
 
 
 .navigation .btnLogout-popup {
-    width: 130px;
+    width: 200px;
     height: 50px;
     background: transparent;
     border: 2px solid black;
@@ -84,13 +84,13 @@ header {
     font-weight: 500;
     color: black;
     margin-left: 40px;
-    transition: .5s;
+    /* transition: .5s; */
 }
 
-.navigation .btnLogout-popup:hover {
+/* .navigation .btnLogout-popup:hover {
     background: white;
     color: #162938;
-}
+} */
 
 .wrapper {
     position: relative;
