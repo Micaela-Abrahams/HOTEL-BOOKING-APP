@@ -46,7 +46,7 @@
 
                     <div class="card-body">
                         <h4> Radiant Oasis Retreat</h4>
-                        <h6 class="mb-4"> R660 per night </h6>
+                        <h6 class="mb-4">From ZAR 1,500 per night </h6>
                         <div class="features mb-4">
                             <h5 class="mb-1"> Rooms: </h5>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
@@ -96,7 +96,7 @@
 
                     <div class="card-body">
                         <h4> Aurora Plaza </h4>
-                        <h6 class="mb-4"> R2,324 per night </h6>
+                        <h6 class="mb-4"> From ZAR 2,324 per night </h6>
                         <div class="features mb-4">
                             <h5 class="mb-1"> Rooms: </h5>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
@@ -153,7 +153,7 @@
 
                     <div class="card-body">
                         <h4> Majestic Horizons Resort</h4>
-                        <h6 class="mb-4"> R1,364 per night </h6>
+                        <h6 class="mb-4"> From ZAR 1,364 per night </h6>
                         <div class="features mb-4">
                             <h5 class="mb-1"> Rooms: </h5>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
@@ -200,7 +200,7 @@
 
                     <div class="card-body">
                         <h4>Serene Haven Suites</h4>
-                        <h6 class="mb-4"> R757 per night </h6>
+                        <h6 class="mb-4"> From ZAR 950 per night </h6>
                         <div class="features mb-4">
                             <h5 class="mb-1"> Rooms: </h5>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
@@ -245,7 +245,7 @@
 
                     <div class="card-body">
                         <h4> Velvet Sky Inn </h4>
-                        <h6 class="mb-4"> R2,667 per night </h6>
+                        <h6 class="mb-4"> From ZAR 2,867 per night </h6>
                         <div class="features mb-4">
                             <h5 class="mb-1"> Rooms: </h5>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
@@ -303,7 +303,7 @@
 
                     <div class="card-body">
                         <h4> Crystal Bay Residency </h4>
-                        <h6 class="mb-4"> R1,522 per night </h6>
+                        <h6 class="mb-4"> ZAR 1,522 per night </h6>
                         <div class="features mb-4">
                             <h5 class="mb-1"> Rooms: </h5>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">

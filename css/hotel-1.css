@@ -26,10 +26,9 @@
     object-fit: cover;
 }
 
-.row row-cols-4 {
+.row-cols-4 {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
     justify-content: center;
     gap: 20px;
 }
@@ -50,4 +49,37 @@
 .col {
     max-width: 100%;
     height: auto;
+}
+
+.reserve-form-container {
+    margin-top: 50px;
+    width: 400px;
+    height: 200px;
+    background-color: #f0f0f0;
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.reserveForm label {
+    padding-left: 20px;
+    margin-top: 20px;
+}
+
+.reserveForm button {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.reserveForm input {
+    width: 50%;
+}
+
+.reserve-btn {
+    padding: 7px 7px 7px 7px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0d6efd;
+    color: white;
 }
