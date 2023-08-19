@@ -95,7 +95,7 @@
                     <img src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" class="card-img-top">
 
                     <div class="card-body">
-                        <h4> Aurora Plaza </h4>
+                        <h4> Aurora Plaza Hotel</h4>
                         <h6 class="mb-4"> From ZAR 2,324 per night </h6>
                         <div class="features mb-4">
                             <h5 class="mb-1"> Rooms: </h5>

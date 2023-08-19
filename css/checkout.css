@@ -1,0 +1,21 @@
+.checkout-details p {
+    color: black;
+}
+
+.checkout-details {
+    margin-top: 50px;
+    width: 500px;
+    height: 500px;
+    background-color: #f0f0f0;
+    padding: 15px 15px 15px 15px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.confirm-btn {
+    padding: 7px 7px 7px 7px;
+    border: none;
+    border-radius: 10px;
+    background-color: #0d6efd;
+    color: white;
+}

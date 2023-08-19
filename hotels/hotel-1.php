@@ -27,6 +27,8 @@
     <!-- Header Section at the Top of the Page that consists of the Logo, links  & Login Button -->
     <header class="bg-white shadow-sm ">
         <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
+        <h6>Radiant Oasis Retreat</h6>
+
 
 
         <nav class="navigation">
@@ -84,7 +86,11 @@
             </div>
 
             <div class="reserve-form-container">
-                <form action="booking-process.php" method="POST" class="reserveForm">
+                <form action="../pages/booking-process-1.php" method="POST" class="reserveForm">
+
+                    <label for="hotel-name" name="hotel-name" style="font-weight: 500;"> Radiant Oasis Retreat:
+                    </label> <br>
+
                     <label for="checkin">Check-in Date:</label>
                     <input type="date" id="checkin" name="checkin" required> <br>
 
