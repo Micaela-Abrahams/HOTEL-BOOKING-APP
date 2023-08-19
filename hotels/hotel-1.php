@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/landingPage.css">
-    <link rel="stylesheet" href="../css/hotel-1.css">
+    <link rel="stylesheet" href="../css/hotels.css">
     <title>Document</title>
 
     <!-- Bootstrap Icon -->
@@ -14,10 +14,12 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 
-    <!-- EXTERNAL CSS CDN LINKS -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Include Bootstrap CSS (place this in the <head> section) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.css" integrity="sha512-OTcub78R3msOCtY3Tc6FzeDJ8N9qvQn1Ph49ou13xgA9VsH9+LRxoFU6EqLhW4+PKRfU+/HReXmSZXHEkpYoOA==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
+    <!-- Include Bootstrap Icons CSS (place this in the <head> section) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+
 </head>
 
 <body>
@@ -73,34 +75,16 @@
 
                 <div class="row row-cols-4">
                     <div class="col">
-                        <h4>Single Room</h4>
-                        <p>Experience tranquility in our Single Rooms at Radiant Oasis Retreat. These thoughtfully designed rooms are tailored for solo travelers seeking comfort and convenience. With a plush single bed and a calming atmosphere, you'll find the perfect haven for rest and relaxation. Our Single Rooms provide a harmonious blend of modern amenities and a cozy retreat.</p>
-                        <h6>Cost: ZAR 1,500.00 per night</h6>
+                        <h4>Description:</h4>
+                        <p>Experience tranquility in our Rooms at Radiant Oasis Retreat. These thoughtfully designed rooms are tailored for travelers seeking comfort and convenience. With a plush bed and a calming atmosphere, you'll find the perfect haven for rest and relaxation. Our Rooms provide a harmonious blend of modern amenities and a cozy retreat.</p>
                     </div>
-                    <!-- <div class="col">
-                        <h4>Double Room</h4>
-                        <p>Indulge in comfort with our Double Rooms at Radiant Oasis Retreat. Featuring a luxurious double bed, these rooms provide a serene escape for couples or those who appreciate extra space. Immerse yourself in a blend of contemporary elegance and serene ambiance. Whether it's a romantic getaway or a well-deserved vacation, our Double Rooms offer a delightful stay.</p>
-                        <h6>Cost: ZAR 2,300.00 per night</h6>
-                    </div>
-                    <div class="col">
-                        <h4>Twin Room</h4>
-                        <p>Our Twin Rooms at Radiant Oasis Retreat offer a comfortable and spacious stay for travelers. Furnished with two cozy twin beds, these rooms are perfect for friends or colleagues traveling together. Enjoy modern amenities, elegant decor, and a relaxing ambiance. Whether you're here for business or leisure, our Twin Rooms provide a peaceful retreat after a long day.</p>
-                        <h6>Cost: ZAR 2,00.00 per night</h6>
-                    </div>
-                    <div class="col">
-                        <h4>Suite</h4>
-                        <p>Elevate your stay with our exquisite Suites at Radiant Oasis Retreat. Designed for those seeking the ultimate in luxury and space, our Suites offer a separate living area, a plush bedroom, and stunning views. Pamper yourself with upscale amenities, elegant decor, and personalized services. Whether you're traveling for a special occasion or simply wish to indulge, our Suites provide a lavish oasis of comfort and style.</p>
-                        <h6>Cost: ZAR 3,450.00 per night</h6>
-                    </div> -->
-
-
 
                 </div>
 
             </div>
 
             <div class="reserve-form-container">
-                <form action="booking_process.php" method="POST" class="reserveForm">
+                <form action="booking-process.php" method="POST" class="reserveForm">
                     <label for="checkin">Check-in Date:</label>
                     <input type="date" id="checkin" name="checkin" required> <br>
 
@@ -109,10 +93,10 @@
 
                     <label for="roomtype">Select Room Type:</label>
                     <select id="roomtype" name="roomtype">
-                        <option value="single">Single Room</option>
-                        <option value="double">Double Room</option>
-                        <option value="twin">Twin Room</option>
-                        <option value="suite">Suite</option>
+                        <option value="single">Single Room : ZAR 1,500.00 per night</option>
+                        <option value="double">Double Room : ZAR 2,300.00 per night</option>
+                        <option value="twin">Twin Room : ZAR 2,750.00 per night</option>
+                        <option value="suite">Suite : ZAR 3,450.00 per night</option>
                     </select> <br>
 
                     <button type="submit" class="reserve-btn">Reserve</button>
@@ -121,6 +105,18 @@
             </div>
 
 
+            <div class="amenities">
+                <h4 class="amenities-title">Amenities</h4>
+                <ul class="list">
+                    <li><i class="bi bi-wifi"></i> Free Wi-Fi</li>
+                    <li><i class="bi bi-tv"></i> Flat-screen TV</li>
+                    <li><i class="bi bi-fan"></i> Air Conditioning</li>
+                    <li><i class="bi bi-star"></i> Toiletries</li>
+                    <li><i class="bi bi-door-open"></i> Lounge Access</li>
+                    <li><i class="bi bi-cup-straw"></i> Bar</li>
+                    <li><i class="bi bi-water"></i> Indoor & Outdoor Pool Access</li>
+                </ul>
+            </div>
 
 
         </div>
@@ -128,32 +124,5 @@
     </div>
     </div>
 
-
-    <!-- <form action="booking_process.php" method="POST">
-        <label for="checkin">Check-in Date:</label>
-        <input type="date" id="checkin" name="checkin" required>
-        <br>
-        <label for="checkout">Check-out Date:</label>
-        <input type="date" id="checkout" name="checkout" required>
-
-        <button type="submit">Reserve</button>
-    </form> -->
-
-    <!-- <div class="room-grid">
-       
-        <div class="room-card">
-            <img src="room1.jpg" alt="Standard Room">
-            <h3>Standard Room</h3>
-            <p>A cozy room with basic amenities.</p>
-        </div>
-
-      
-        <div class="room-card">
-            <img src="room2.jpg" alt="Deluxe Room">
-            <h3>Deluxe Room</h3>
-            <p>A spacious room with additional amenities.</p>
-        </div> -->
-
-    <!-- Add more rooms as needed -->
     </div>
 </body>

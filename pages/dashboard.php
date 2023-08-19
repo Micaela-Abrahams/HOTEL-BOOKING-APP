@@ -71,7 +71,7 @@
                                 Bar
                             </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                Indoor & Outdoor Pool
+                                Indoor & Outdoor Pool Access
                             </span>
                         </div>
                         <div class="rating mb-4">
@@ -123,11 +123,11 @@
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
                                 Bar
                             </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                            <!-- <span class="badge rounded-pill bg-light text-dark text-wrap">
                                 Tennis Court
-                            </span>
+                            </span> -->
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                Indoor & Outdoor Pool
+                                Indoor & Outdoor Pool Access
                             </span>
                         </div>
                         <div class="rating mb-4">
@@ -157,10 +157,16 @@
                         <div class="features mb-4">
                             <h5 class="mb-1"> Rooms: </h5>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                1 Single
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
                                 1 Twin
                             </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
                                 1 Double
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                Suite
                             </span>
                         </div>
                         <div class="facilities mb-4">
@@ -175,7 +181,7 @@
                                 Tennis Court
                             </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                Indoor & Outdoor Pool
+                                Indoor & Outdoor Pool Access
                             </span>
                         </div>
                         <div class="rating mb-4">
@@ -204,6 +210,12 @@
                         <div class="features mb-4">
                             <h5 class="mb-1"> Rooms: </h5>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                1 Single
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                1 Twin
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
                                 1 Double
                             </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
@@ -216,10 +228,15 @@
                                 Free wifi
                             </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                Air Conditioning
+                            </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                Toiletries </span>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
                                 Bar
                             </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                Indoor & Outdoor pool
+                                Indoor & Outdoor pool Acess
                             </span>
                         </div>
                         <div class="rating mb-4">
@@ -272,11 +289,11 @@
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
                                 Bar
                             </span>
-                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                            <!-- <span class="badge rounded-pill bg-light text-dark text-wrap">
                                 Tennis Court
-                            </span>
+                            </span> -->
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
-                                Indoor & Outdoor pool
+                                Indoor & Outdoor pool Access
                             </span>
                         </div>
                         <div class="rating mb-4">
@@ -306,6 +323,9 @@
                         <h6 class="mb-4"> ZAR 1,522 per night </h6>
                         <div class="features mb-4">
                             <h5 class="mb-1"> Rooms: </h5>
+                            <span class="badge rounded-pill bg-light text-dark text-wrap">
+                                1 Single
+                            </span>
                             <span class="badge rounded-pill bg-light text-dark text-wrap">
                                 1 Twin
                             </span>
