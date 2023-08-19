@@ -20,7 +20,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $userRow = $result->fetch_assoc();
         if ($password === $userRow['password']) {
             // Password is correct, proceed with login
-            echo "Login successful.";
+            $_SESSION['user_id'] = $userRow['id']; // Set the user ID in the session
             header("Location:../pages/dashboard.php");
             exit();
         } else {

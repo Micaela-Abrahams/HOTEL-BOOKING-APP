@@ -1,3 +1,14 @@
+<?
+session_start(); // Start the session
+
+// Retrieve the user ID from the session
+$userId = $_SESSION['user_id'];
+
+
+?>
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 

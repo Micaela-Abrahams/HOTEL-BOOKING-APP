@@ -1,6 +1,27 @@
 <!-- checkout.php -->
 
 <?php
+error_reporting(E_ALL);
+ini_set('display_errors', 1);
+
+session_start(); // Start the session
+
+require __DIR__ . "/../includes/db.php";
+
+if (!$connection) {
+    die("Database connection failed: " . mysqli_connect_error());
+}
+// Retrieve the user ID from the session
+$userId = $_SESSION['user_id'];
+
+// Fetch user's name and surname from the database
+$query = "SELECT firstName, surname FROM registration_table WHERE id = $userId";
+$result = mysqli_query($connection, $query);
+$row = mysqli_fetch_assoc($result);
+
+$name = $row['firstName'];
+$surname = $row['surname'];
+
 // Retrieve the data from query parameters
 $hotelName = $_GET["hotelName"];
 $checkin = $_GET["checkin"];
@@ -40,7 +61,7 @@ $totalCostWithStay = $_GET["totalCostWithStay"];
 <body>
     <!-- Header Section at the Top of the Page that consists of the Logo, links  & Login Button -->
     <header class="bg-white shadow-sm ">
-        <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
+        <h1 class="userWelcome">Traveltopia</h1>
 
 
         <nav class="navigation">
@@ -56,7 +77,7 @@ $totalCostWithStay = $_GET["totalCostWithStay"];
 
     <div class="checkout-details">
         <h1>Checkout</h1>
-        <p>Customer Name & Surname:</p>
+        <p>Customer Name & Surname: <?php echo $name . ' ' . $surname; ?></p>
         <p>Booking ID: <?php echo $bookingId ?></p>
         <p>Hotel Name: <?php echo $hotelName ?></p>
         <p>Check-in Date: <?php echo $checkin; ?></p>
