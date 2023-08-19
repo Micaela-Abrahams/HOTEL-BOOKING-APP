@@ -37,7 +37,7 @@
             <a href="../landingPage.php#contact">Contact</a>
             <a href="../pages/dashboard.php">View Hotels</a>
             <a href="#">Bookings</a>
-            <a href="../pages/login.php"><button class="btnLogout-popup">Logout</button></a>
+            <a href="../pages/logout.php"><button class="btnLogout-popup">Logout</button></a>
         </nav>
     </header>
     <!-- <h2 class="hotel-1-title">Radiant Oasis Retreat </h2> -->

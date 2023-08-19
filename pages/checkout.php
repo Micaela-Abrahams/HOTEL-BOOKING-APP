@@ -11,16 +11,33 @@ require __DIR__ . "/../includes/db.php";
 if (!$connection) {
     die("Database connection failed: " . mysqli_connect_error());
 }
-// Retrieve the user ID from the session
-$userId = $_SESSION['user_id'];
 
-// Fetch user's name and surname from the database
-$query = "SELECT firstName, surname FROM registration_table WHERE id = $userId";
-$result = mysqli_query($connection, $query);
-$row = mysqli_fetch_assoc($result);
 
-$name = $row['firstName'];
-$surname = $row['surname'];
+// Check if the user is logged in
+if (isset($_SESSION['user_id'])) {
+    $userId = $_SESSION['user_id'];
+
+    // Fetch user's name and surname from the database
+    $query = "SELECT firstName, surname FROM registration_table WHERE id = $userId";
+    $result = mysqli_query($connection, $query);
+
+    if ($result) {
+        $row = mysqli_fetch_assoc($result);
+
+        // Retrieve the name and surname
+        $name = $row['firstName'];
+        $surname = $row['surname'];
+    } else {
+        // Error handling if the query fails
+        $name = "Unknown";
+        $surname = "Unknown";
+    }
+} else {
+    // Redirect to the login page if user is not logged in
+    header("Location: ../pages/login.php");
+    exit();
+}
+
 
 // Retrieve the data from query parameters
 $hotelName = $_GET["hotelName"];
