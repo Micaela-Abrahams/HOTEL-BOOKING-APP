@@ -91,23 +91,31 @@ $totalCostWithStay = $_GET["totalCostWithStay"];
         </nav>
     </header>
 
+    <form action="../pages/checkout-process.php" method="post">
+        <input type="hidden" name="bookingId" value="<?php echo $bookingId; ?>">
+        <input type="hidden" name="hotelName" value="<?php echo $hotelName; ?>">
+        <input type="hidden" name="checkin" value="<?php echo $checkin; ?>">
+        <input type="hidden" name="checkout" value="<?php echo $checkout; ?>">
+        <input type="hidden" name="roomType" value="<?php echo $roomType; ?>">
+        <input type="hidden" name="costPerNight" value="<?php echo $costPerNight; ?>">
+        <input type="hidden" name="totalCost" value="<?php echo $totalCost; ?>">
+        <input type="hidden" name="totalCostWithStay" value="<?php echo $totalCostWithStay; ?>">
 
-    <div class="checkout-details">
-        <h1>Checkout</h1>
-        <p>Customer Name & Surname: <?php echo $name . ' ' . $surname; ?></p>
-        <p>Booking ID: <?php echo $bookingId ?></p>
-        <p>Hotel Name: <?php echo $hotelName ?></p>
-        <p>Check-in Date: <?php echo $checkin; ?></p>
-        <p>Check-out Date: <?php echo $checkout; ?></p>
-        <p>Room Type: <?php echo $roomType; ?></p>
-        <p>Cost per Night: ZAR <?php echo $costPerNight ?>.00</p>
-        <p>Cost per Night (Including VAT): ZAR <?php echo $totalCost ?></p>
-        <p>Booking Total Cost x Amount of days booked: ZAR <?php echo $totalCostWithStay ?></p>
+        <div class="checkout-details">
+            <h1>Checkout</h1>
+            <p>Customer Name & Surname: <?php echo $name . ' ' . $surname; ?></p>
+            <p>Booking ID: <?php echo $bookingId ?></p>
+            <p>Hotel Name: <?php echo $hotelName ?></p>
+            <p>Check-in Date: <?php echo $checkin; ?></p>
+            <p>Check-out Date: <?php echo $checkout; ?></p>
+            <p>Room Type: <?php echo $roomType; ?></p>
+            <p>Cost per Night: ZAR <?php echo $costPerNight ?>.00</p>
+            <p>Cost per Night (Including VAT): ZAR <?php echo $totalCost ?></p>
+            <p>Booking Total Cost x Amount of days booked: ZAR <?php echo $totalCostWithStay ?></p>
 
-        <button type="submit" class="confirm-btn">Confirm</button>
-
-    </div>
-
+            <button type="submit" class="confirm-btn">Confirm</button>
+        </div>
+    </form>
 
 </body>
 

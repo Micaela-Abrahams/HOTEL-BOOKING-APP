@@ -57,8 +57,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Calculate total cost and total cost with stay duration
     $numOfDays = (strtotime($checkout) - strtotime($checkin)) / (60 * 60 * 24); // Calculate days difference
-    $totalCost = number_format($bookingCalculator->calculateTotalCost(), 2);
-    $totalCostWithStay = number_format($bookingCalculator->calculateTotalCostWithStayDuration($numOfDays), 2);
+    $totalCost = $bookingCalculator->calculateTotalCost();
+    $totalCostWithStay = $bookingCalculator->calculateTotalCostWithStayDuration($numOfDays);
 
     // Generate a unique booking ID
     $bookingId = uniqid();
