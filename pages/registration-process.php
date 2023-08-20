@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Connect to Database
 require __DIR__ . "/../includes/db.php";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -37,9 +38,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $checkStmt->close();
 }
-
-
-
 ?>
 
 
@@ -66,7 +64,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="../landingPage.php" class="title-link">
             <h1 class="userWelcome">Traveltopia</h1>
         </a>
-
 
         <nav class="navigation">
             <a href="../landingPage.php#about">About</a>

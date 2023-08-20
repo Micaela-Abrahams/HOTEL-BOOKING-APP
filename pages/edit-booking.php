@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Connect to Database
 require __DIR__ . "/../includes/db.php";
 
 if (!$connection) {
@@ -11,8 +12,6 @@ if (!$connection) {
 }
 
 session_start();
-
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'GET' && isset($_GET['booking_id'])) {
     $bookingId = $_GET['booking_id'];
@@ -49,8 +48,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['update_booking'])) {
     }
 }
 
-
-
 $hotelRoomTypesCosts = array(
     "Radiant Oasis Retreat" => array("Single" => "ZAR 1500.00", "Double" => "ZAR 2300.00", "Twin" => "ZAR 2750.00", "Suite" => "ZAR 3450.00"),
     "Aurora Plaza Hotel" => array("Single" => "ZAR 2324.00", "Double" => "ZAR 2800.00", "Twin" => "ZAR 2500.00", "Suite" => "ZAR 3450.00"),
@@ -76,6 +73,8 @@ function calculateVatInclusiveRate($costPerNight, $vatPercentage)
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <!-- Landing Page CSS -->
     <link rel="stylesheet" href="../css/landingPage.css">
 
     <!-- Bootstrap Icon -->
@@ -105,9 +104,9 @@ function calculateVatInclusiveRate($costPerNight, $vatPercentage)
         </nav>
     </header>
 
+    <!-- Form that will allow user to Edit Booking -->
     <form action="update_booking.php" method="post">
         <h1>Edit Booking</h1>
-
 
         <label for="hotel_name">Hotel Name:</label>
         <select name="hotel_name" id="hotel_name_select">
@@ -162,7 +161,6 @@ function calculateVatInclusiveRate($costPerNight, $vatPercentage)
     <!-- JAVASCRIPT -->
     <script>
         const hotelRoomTypesCosts = <?php echo json_encode($hotelRoomTypesCosts); ?>;
-
         const hotelNameSelect = document.getElementById('hotel_name_select');
         const roomTypeSelect = document.getElementById('room_type_select');
         const costPerNightSpan = document.getElementById('cost_per_night');
@@ -183,7 +181,6 @@ function calculateVatInclusiveRate($costPerNight, $vatPercentage)
             costPerNightSpan.textContent = costPerNight;
         });
     </script>
-
 
 </body>
 

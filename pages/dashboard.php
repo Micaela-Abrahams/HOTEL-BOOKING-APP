@@ -3,11 +3,7 @@ session_start(); // Start the session
 
 // Retrieve the user ID from the session
 $userId = $_SESSION['user_id'];
-
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -36,7 +32,6 @@ $userId = $_SESSION['user_id'];
     <header class="bg-white shadow-sm ">
         <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
 
-
         <nav class="navigation">
             <a href="../pages/landing-page2.php#about">About</a>
             <a href="../pages/gallery2.php">Gallery</a>
@@ -46,7 +41,6 @@ $userId = $_SESSION['user_id'];
             <a href="../pages/logout.php"><button class="btnLogout-popup">Logout</button></a>
         </nav>
     </header>
-
 
     <!-- Radiant Oasis Retreat Hotel -->
     <div class="container">
@@ -374,14 +368,6 @@ $userId = $_SESSION['user_id'];
                 </div>
             </div>
 
-
-
-
-
-
-
-
-
             <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
             <!-- Jquery Script -->
@@ -389,7 +375,6 @@ $userId = $_SESSION['user_id'];
 
             <!-- EXTERNAL JS CDN LINKS -->
             <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
 
             <script src="../js/script.js"></script>
             <!-- Icons Package -->

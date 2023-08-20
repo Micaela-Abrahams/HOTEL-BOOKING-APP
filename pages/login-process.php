@@ -4,8 +4,8 @@ ini_set('display_errors', 1);
 
 session_start();
 
+// Connect to Database
 require __DIR__ . "/../includes/db.php";
-
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $userNameOrEmail = $_POST['username'];
@@ -61,7 +61,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <a href="../landingPage.php" class="title-link">
             <h1 class="userWelcome">Traveltopia</h1>
         </a>
-
 
         <nav class="navigation">
             <a href="../landingPage.php#about">About</a>

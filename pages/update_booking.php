@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Connect Database
 require __DIR__ . "/../includes/db.php";
 if (!$connection) {
     die("Database connection failed: " . mysqli_connect_error());

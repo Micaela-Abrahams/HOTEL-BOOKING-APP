@@ -1,15 +1,3 @@
-<?php
-
-// session_start(); // Start the session
-
-// if (isset($_POST['name'])) {
-//     $_SESSION['name'] = $_POST['name']; // Store the name in the session variable
-// } else {
-//     $_SESSION['name'] = ""; // Set a default value if the name is not provided
-// }
-?>
-
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -38,7 +26,6 @@
             <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
         </a>
 
-
         <nav class="navigation">
             <a href="../landingPage.php#about">About</a>
             <a href="../pages/gallery.php">Gallery</a>
@@ -46,7 +33,6 @@
             <!-- <a href="#"><button class="btnLogout-popup">Login</button></a> -->
         </nav>
     </header>
-
 
     <!-- LOGIN -->
     <div class="card">

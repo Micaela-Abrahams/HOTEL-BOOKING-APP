@@ -25,7 +25,6 @@
     <header class="bg-white shadow-sm ">
         <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
 
-
         <nav class="navigation">
             <a href="#about">About</a>
             <a href="./gallery2.php">Gallery</a>
@@ -35,7 +34,6 @@
             <a href="./logout.php"><button class="btnLogout-popup">Logout</button></a>
         </nav>
     </header>
-
 
     <!-- Hotel Carousel -->
     <!-- Slide images from left to right/right to left -->
@@ -115,6 +113,7 @@
     <!-- EXTERNAL JS CDN LINKS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+    <!-- Javascript to make carousel move left/Right -->
     <script>
         $('.owl-carousel').owlCarousel({
             loop: true,

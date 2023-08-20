@@ -29,8 +29,6 @@
         <h1 class="userWelcome">Traveltopia <?php echo $_SESSION['name']; ?></h1>
         <h6>Radiant Oasis Retreat</h6>
 
-
-
         <nav class="navigation">
             <a href="../pages/landing-page2.php#about">About</a>
             <a href="../pages/landing-page2.php#contact">Contact</a>

@@ -1,17 +1,15 @@
-<!-- checkout.php -->
-
 <?php
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
 session_start(); // Start the session
 
+// Connect Database
 require __DIR__ . "/../includes/db.php";
 
 if (!$connection) {
     die("Database connection failed: " . mysqli_connect_error());
 }
-
 
 // Check if the user is logged in
 if (isset($_SESSION['user_id'])) {
@@ -38,7 +36,6 @@ if (isset($_SESSION['user_id'])) {
     exit();
 }
 
-
 // Retrieve the data from query parameters
 $hotelName = $_GET["hotelName"];
 $checkin = $_GET["checkin"];
@@ -48,7 +45,6 @@ $bookingId = $_GET["bookingId"];
 $costPerNight = $_GET["costPerNight"];
 $totalCost = $_GET["totalCost"];
 $totalCostWithStay = $_GET["totalCostWithStay"];
-
 ?>
 
 <!------------------------- Checkout-------------------------------->
@@ -80,14 +76,13 @@ $totalCostWithStay = $_GET["totalCostWithStay"];
     <header class="bg-white shadow-sm ">
         <h1 class="userWelcome">Traveltopia</h1>
 
-
         <nav class="navigation">
-            <a href="../landingPage.php#about">About</a>
-            <a href="../pages/gallery.php">Gallery</a>
-            <a href="../landingPage.php#contact">Contact</a>
+            <a href="../pages/landing-page2.php#about">About</a>
+            <a href="../pages/landing-page2.php#contact">Contact</a>
+            <a href="../pages/gallery2.php">Gallery</a>
             <a href="../pages/dashboard.php">View Hotels</a>
-            <a href="#">Bookings</a>
-            <a href="../pages/login.php"><button class="btnLogout-popup">Logout</button></a>
+            <a href="../pages/view-bookings.php">Bookings</a>
+            <a href="../pages/logout.php"><button class="btnLogout-popup">Logout</button></a>
         </nav>
     </header>
 

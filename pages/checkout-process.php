@@ -11,7 +11,6 @@ if (!$connection) {
 }
 
 // Check if the necessary form fields are set
-
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Retrieve data from the form
     $userId = $_SESSION['user_id'];

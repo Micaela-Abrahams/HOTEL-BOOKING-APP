@@ -2,6 +2,7 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+// Link Database
 require __DIR__ . "/../includes/db.php";
 session_start();
 
@@ -23,9 +24,6 @@ $query = "SELECT * FROM bookings_table WHERE user_id = $userId";
 $result = mysqli_query($connection, $query);
 
 ?>
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -50,6 +48,8 @@ $result = mysqli_query($connection, $query);
     <!-- Include Bootstrap Icons CSS (place this in the <head> section) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
 
+
+    <!-- Additional styling -->
     <style>
         table {
             border-collapse: collapse;
