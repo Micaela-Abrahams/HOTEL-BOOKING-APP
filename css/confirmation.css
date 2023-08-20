@@ -1,0 +1,21 @@
+.confirmation-text {
+    margin-top: 150px;
+}
+
+.confirmation-text h3 {
+    font-family: 'Lato', sans-serif !important;
+    color: black;
+    font-size: 50px;
+}
+
+.confirmation-text p {
+    font-family: 'Lato', sans-serif !important;
+    color: black;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.wanderlust-text {
+    margin-top: 40px;
+    margin-bottom: -100px;
+}

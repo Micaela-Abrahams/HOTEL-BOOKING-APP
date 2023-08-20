@@ -2,6 +2,8 @@
 error_reporting(E_ALL);
 ini_set('display_errors', 1);
 
+session_start();
+
 require __DIR__ . "/../includes/db.php";
 
 if (!$connection) {
@@ -29,7 +31,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $insertStmt->close();
 
     // Redirect to a confirmation page or booking details page
-    header("Location: ../pages/thank_you.php");
+    header("Location: ../pages/confirmation.php");
     exit();
 } else {
     // Handle case where form fields are not properly set

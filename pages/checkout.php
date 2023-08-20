@@ -117,6 +117,6 @@ $totalCostWithStay = $_GET["totalCostWithStay"];
         </div>
     </form>
 
-</body>
+
 
 </html>

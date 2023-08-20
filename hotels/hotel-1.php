@@ -110,7 +110,6 @@
 
             </div>
 
-
             <div class="amenities">
                 <h4 class="amenities-title">Amenities</h4>
                 <ul class="list">
@@ -123,7 +122,6 @@
                     <li><i class="bi bi-water"></i> Indoor & Outdoor Pool Access</li>
                 </ul>
             </div>
-
 
         </div>
 
