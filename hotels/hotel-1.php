@@ -32,16 +32,16 @@
 
 
         <nav class="navigation">
-            <a href="../landingPage.php#about">About</a>
-            <a href="../pages/gallery.php">Gallery</a>
-            <a href="../landingPage.php#contact">Contact</a>
+            <a href="../pages/landing-page2.php#about">About</a>
+            <a href="../pages/landing-page2.php#contact">Contact</a>
+            <a href="../pages/gallery2.php">Gallery</a>
             <a href="../pages/dashboard.php">View Hotels</a>
-            <a href="#">Bookings</a>
+            <a href="../pages/view-bookings.php">Bookings</a>
             <a href="../pages/logout.php"><button class="btnLogout-popup">Logout</button></a>
         </nav>
     </header>
-    <!-- <h2 class="hotel-1-title">Radiant Oasis Retreat </h2> -->
 
+    <!---------------------------------- Main Content ---------------------------------->
     <div class="container">
         <!-- First Set -->
         <div class="grid-set">

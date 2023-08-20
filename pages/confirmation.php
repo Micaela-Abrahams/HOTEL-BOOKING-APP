@@ -67,7 +67,7 @@ if (isset($_SESSION['user_id'])) {
             <a href="../pages/gallery.php">Gallery</a>
             <a href="../landingPage.php#contact">Contact</a>
             <a href="../pages/dashboard.php">View Hotels</a>
-            <a href="#">Bookings</a>
+            <a href="../pages/view-bookings.php">Bookings</a>
             <a href="../pages/logout.php"><button class="btnLogout-popup">Logout</button></a>
         </nav>
     </header>

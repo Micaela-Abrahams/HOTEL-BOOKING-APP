@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/landingPage.css">
+    <link rel="stylesheet" href="../css/landingPage.css">
     <title>Document</title>
 
     <!-- Bootstrap Icon -->
@@ -28,9 +28,11 @@
 
         <nav class="navigation">
             <a href="#about">About</a>
-            <a href="./pages/gallery.php">Gallery</a>
+            <a href="./gallery2.php">Gallery</a>
             <a href="#contact">Contact</a>
-            <a href="./pages/login.php"><button class="btnLogout-popup">Login / Register</button></a>
+            <a href="./dashboard.php">Hotel Views</a>
+            <a href="./view-bookings.php">Bookings</a>
+            <a href="./logout.php"><button class="btnLogout-popup">Logout</button></a>
         </nav>
     </header>
 
@@ -39,82 +41,6 @@
     <!-- Slide images from left to right/right to left -->
     <div class="container">
         <h1 class="display-3 text-center fw-bold my-4">Welcome to Traveltopia</h1>
-        <h3 class="display text-center fw-bold my-4">Slide through our selection</h3>
-        <div class="row">
-            <div class="owl-carousel owl-theme">
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="" class="card-img-top" height="300px">
-                            <hr />
-                            <h1 class="text-center">Radiant Oasis Retreat</h1>
-                            <p>Unwind in the lap of nature at Radiant Oasis Retreat, where modern amenities harmonize with the natural world. Surrounded by lush landscapes and serene waters, our retreat offers a holistic experience to rejuvenate mind, body, and soul.</p>
-                            <form action="../HOTEL-BOOKING-APP/pages/login.php"> <button class="go-to-hotel-btn">Click for more</button></form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="https://images.unsplash.com/photo-1586611292717-f828b167408c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="" class="card-img-top" height="300px">
-                            <hr />
-                            <h1 class="text-center">Aurora Plaza <br>Hotel</h1>
-                            <p>Welcome to the vibrant world of Aurora Plaza Hotel, where modern elegance meets urban excitement. Located in the heart of the city, our hotel offers easy access to cultural landmarks, shopping districts, and a pulsating nightlife.</p>
-                            <form action="../HOTEL-BOOKING-APP/pages/login.php"> <button class="go-to-hotel-btn">Click for more</button></form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80" alt="" class="card-img-top" height="300px">
-                            <hr />
-                            <h1 class="text-center">Majestic Horizons Resort</h1>
-                            <p>Embark on a journey of luxury and grandeur at Majestic Horizons Resort. Set against a backdrop of rolling hills and open skies, our resort boasts opulent amenities and breathtaking vistas that redefine the meaning of indulgence.</p>
-                            <form action="../HOTEL-BOOKING-APP/pages/login.php"> <button class="go-to-hotel-btn">Click for more</button></form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1025&q=80" alt="" class="card-img-top" height="300px">
-                            <hr />
-                            <h1 class="text-center">Serene Haven Suites</h1>
-                            <p>Immerse yourself in tranquility at Serene Haven Suites, where every stay is a peaceful escape. Nestled amidst lush gardens and offering luxurious accommodations, our hotel is the perfect haven for those seeking a serene retreat.</p>
-                            <form action="../HOTEL-BOOKING-APP/pages/login.php"> <button class="go-to-hotel-btn">Click for more</button></form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=749&q=80" alt="" class="card-img-top" height="300px">
-                            <hr />
-                            <h1 class="text-center">Velvet Sky Inn</h1>
-                            <p>Discover comfort like never before at Velvet Sky Inn, where plush furnishings and warm ambiance create an inviting atmosphere. Whether you're here for business or leisure, our attentive staff ensures your stay is as smooth as velvet.</p>
-                            <form action="../HOTEL-BOOKING-APP/pages/login.php"> <button class="go-to-hotel-btn">Click for more</button></form>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="item">
-                    <div class="card">
-                        <div class="card-body">
-                            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1170&q=80" alt="" class="card-img-top" height="300px">
-                            <hr />
-                            <h1 class="text-center">Crystal Bay Residency</h1>
-                            <p>Experience the allure of Crystal Bay Residency, a coastal gem offering breathtaking ocean views from every window. With its elegant architecture and exceptional service, this hotel is a sanctuary of relaxation and sophistication.</p>
-                            <form action="../HOTEL-BOOKING-APP/pages/login.php"> <button class="go-to-hotel-btn">Click for more</button></form>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         <!-- About Section -->
         <h1 id="about" class="about-section">About</h1>
@@ -180,13 +106,6 @@
         </div>
 
     </div>
-
-
-
-
-
-
-
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
 
