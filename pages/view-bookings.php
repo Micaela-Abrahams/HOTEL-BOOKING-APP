@@ -16,6 +16,24 @@ if (!isset($_SESSION['user_id'])) {
     exit();
 }
 
+// Checks if the 'CANCEL' button was clicked
+if (isset($_GET['cancel'])) {
+    $bookingID = $_GET['cancel']; // Ensure it's a string
+
+    // SQL query to delete the booking with proper quoting
+    $query = "DELETE FROM bookings_table WHERE booking_id = '$bookingID'";
+
+    if (mysqli_query($connection, $query)) {
+        // Booking canceled successfully, you can redirect or show a success message
+        header("Location: ../pages/view-bookings.php");
+    } else {
+        // Error handling, display a detailed error message for debugging
+        echo "Error canceling booking: " . mysqli_error($connection) . "<br>";
+        echo "Query: $query"; // Add this line to display the actual SQL query being executed
+    }
+}
+
+
 // Retrieve user ID
 $userId = $_SESSION['user_id'];
 
@@ -29,6 +47,31 @@ $result = mysqli_query($connection, $query);
 <html lang="en">
 
 <head>
+
+    <script>
+        function confirmCancel(bookingID) {
+            if (confirm("Are you sure you want to cancel this booking?")) {
+                // If the user confirms, redirect to the cancellation URL
+                window.location.href = 'view-bookings.php?cancel=' + bookingID;
+            }
+        }
+
+        // JavaScript function to handle the receipt download
+        function downloadReceipt(bookingID) {
+            // Construct the download link for the specific booking
+            var downloadLink = 'receipt.php?booking_id=' + bookingID;
+            // Trigger the download by setting the window location
+            window.location.href = downloadLink;
+        }
+
+        // Attach a click event to the "Download Receipt" button
+        document.getElementById('download-receipt').addEventListener('click', function() {
+            // Replace 'booking_id_value' with the actual booking ID you want to download
+            downloadReceipt('booking_id_value');
+        });
+    </script>
+
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -87,6 +130,8 @@ $result = mysqli_query($connection, $query);
     <main>
         <h1>Your Bookings</h1>
 
+        <button id="download-receipt" class="download-receipt-btn">Download Receipt</button>
+
         <?php
         // Check if there are bookings for the user
         if (mysqli_num_rows($result) > 0) {
@@ -100,22 +145,24 @@ $result = mysqli_query($connection, $query);
                         <th>Cost Per Night</th>
                         <th>Cost Per Night (Including VAT)</th>
                         <th>Booking Total</th>
+                       
                     </tr>";
 
             while ($row = mysqli_fetch_assoc($result)) {
                 // Displaying each booking's information as a table row
                 echo "<tr>                        
-                        <td>{$row['booking_id']}</td>
-                        <td>{$row['hotel_name']}</td>
-                        <td>{$row['room_type']}</td>
-                        <td>{$row['check_in_date']}</td>
-                        <td>{$row['check_out_date']}</td>
-                        <td>ZAR {$row['cost_per_night']}</td>
-                        <td>ZAR {$row['Inc_Vat']}</td>
-                        <td>ZAR {$row['total_cost']}</td>
-                        <td><a href='edit-booking.php?booking_id={$row['booking_id']}' class='edit-btn'>Edit Booking</a></td>
-                        <td><a href='cancel-booking.php?booking_id={$row['booking_id']}' class='delete-btn'>Cancel Booking</a></td>
-                    </tr>";
+                <td>{$row['booking_id']}</td>
+                <td>{$row['hotel_name']}</td>
+                <td>{$row['room_type']}</td>
+                <td>{$row['check_in_date']}</td>
+                <td>{$row['check_out_date']}</td>
+                <td>ZAR {$row['cost_per_night']}</td>
+                <td>ZAR {$row['Inc_Vat']}</td>
+                <td>ZAR {$row['total_cost']}</td>
+                <td><a href='edit-booking.php?booking_id={$row['booking_id']}' class='edit-btn'>Edit Booking</a></td>
+                <td><a href='#' onclick=\"confirmCancel('{$row['booking_id']}')\" class='delete-btn'>Cancel</a></td>
+              
+            </tr>";
             }
 
             echo "</table>";
@@ -123,6 +170,8 @@ $result = mysqli_query($connection, $query);
             echo "<p>No bookings found.</p>";
         }
         ?>
+
+
     </main>
 
 </body>

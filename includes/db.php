@@ -4,7 +4,7 @@ ini_set('display_errors', 1);
 
 // Check if the form was submitted
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    $userNameOrEmail = $_POST['username']; // Change this to the appropriate field name in your form
+    $userNameOrEmail = $_POST['username'];
     $password = $_POST['password'];
 }
 // Database connection parameters
