@@ -1,6 +1,6 @@
 <?
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
+// error_reporting(E_ALL);
+// ini_set('display_errors', 1);
 
 // Link Database
 require __DIR__ . "/../includes/db.php";
@@ -55,7 +55,9 @@ $result = mysqli_query($connection, $query);
                 window.location.href = 'view-bookings.php?cancel=' + bookingID;
             }
         }
+    </script>
 
+    <script>
         // JavaScript function to handle the receipt download
         function downloadReceipt(bookingID) {
             // Construct the download link for the specific booking
@@ -64,13 +66,15 @@ $result = mysqli_query($connection, $query);
             window.location.href = downloadLink;
         }
 
-        // Attach a click event to the "Download Receipt" button
-        document.getElementById('download-receipt').addEventListener('click', function() {
-            // Replace 'booking_id_value' with the actual booking ID you want to download
-            downloadReceipt('booking_id_value');
+        // Attach a click event to the "Download Receipt" buttons
+        var downloadButtons = document.querySelectorAll('.download-receipt-btn');
+        downloadButtons.forEach(function(button) {
+            button.addEventListener('click', function() {
+                var bookingID = button.getAttribute('data-bookingid');
+                downloadReceipt(bookingID);
+            });
         });
     </script>
-
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -130,11 +134,14 @@ $result = mysqli_query($connection, $query);
     <main>
         <h1>Your Bookings</h1>
 
-        <button id="download-receipt" class="download-receipt-btn">Download Receipt</button>
+        <button id="download-receipt" class="download-receipt-btn" onclick="downloadReceipt('<?php echo $row['booking_id']; ?>')">Download Receipt</button>
+
 
         <?php
         // Check if there are bookings for the user
         if (mysqli_num_rows($result) > 0) {
+            // $bookingID = $row['booking_id']; // Store the booking ID in a JavaScript variable
+
             echo "<table>
                     <tr>
                         <th>Booking ID</th>
@@ -145,7 +152,6 @@ $result = mysqli_query($connection, $query);
                         <th>Cost Per Night</th>
                         <th>Cost Per Night (Including VAT)</th>
                         <th>Booking Total</th>
-                       
                     </tr>";
 
             while ($row = mysqli_fetch_assoc($result)) {
@@ -170,7 +176,6 @@ $result = mysqli_query($connection, $query);
             echo "<p>No bookings found.</p>";
         }
         ?>
-
 
     </main>
 
