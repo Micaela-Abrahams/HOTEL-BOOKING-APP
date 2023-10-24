@@ -20,7 +20,7 @@ if (!isset($_SESSION['user_id'])) {
 if (isset($_GET['cancel'])) {
     $bookingID = $_GET['cancel']; // Ensure it's a string
 
-    // SQL query to delete the booking with proper quoting
+    // SQL query to delete the booking 
     $query = "DELETE FROM bookings_table WHERE booking_id = '$bookingID'";
 
     if (mysqli_query($connection, $query)) {
@@ -48,6 +48,7 @@ $result = mysqli_query($connection, $query);
 
 <head>
 
+    <!-- Cancellation Pop-up Message -->
     <script>
         function confirmCancel(bookingID) {
             if (confirm("Are you sure you want to cancel this booking?")) {
@@ -57,24 +58,6 @@ $result = mysqli_query($connection, $query);
         }
     </script>
 
-    <script>
-        // JavaScript function to handle the receipt download
-        function downloadReceipt(bookingID) {
-            // Construct the download link for the specific booking
-            var downloadLink = 'receipt.php?booking_id=' + bookingID;
-            // Trigger the download by setting the window location
-            window.location.href = downloadLink;
-        }
-
-        // Attach a click event to the "Download Receipt" buttons
-        var downloadButtons = document.querySelectorAll('.download-receipt-btn');
-        downloadButtons.forEach(function(button) {
-            button.addEventListener('click', function() {
-                var bookingID = button.getAttribute('data-bookingid');
-                downloadReceipt(bookingID);
-            });
-        });
-    </script>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -134,13 +117,21 @@ $result = mysqli_query($connection, $query);
     <main>
         <h1>Your Bookings</h1>
 
-        <button id="download-receipt" class="download-receipt-btn" onclick="downloadReceipt('<?php echo $row['booking_id']; ?>')">Download Receipt</button>
+        <!-- Add a download button above the table -->
+        <button id="download-receipt" class="download-receipt-btn" onclick="downloadReceipt()">Download Receipt (.txt)</button>
 
+        <!-- JavaScript function to handle the download -->
+        <script>
+            function downloadReceipt() {
+                // Use JavaScript to trigger a download link to a PHP script
+                window.location.href = 'receipt.php';
+            }
+        </script>
 
         <?php
         // Check if there are bookings for the user
-        if (mysqli_num_rows($result) > 0) {
-            // $bookingID = $row['booking_id']; // Store the booking ID in a JavaScript variable
+        if (mysqli_num_rows($result) > 0) {;
+
 
             echo "<table>
                     <tr>
@@ -166,18 +157,26 @@ $result = mysqli_query($connection, $query);
                 <td>ZAR {$row['Inc_Vat']}</td>
                 <td>ZAR {$row['total_cost']}</td>
                 <td><a href='edit-booking.php?booking_id={$row['booking_id']}' class='edit-btn'>Edit Booking</a></td>
-                <td><a href='#' onclick=\"confirmCancel('{$row['booking_id']}')\" class='delete-btn'>Cancel</a></td>
-              
+                <td><a href='#' onclick=\"confirmCancel('{$row['booking_id']}')\" class='delete-btn'>Cancel</a></td>              
             </tr>";
             }
 
-            echo "</table>";
+            "</table>";
+
+            // echo "<button id='download-receipt' class='download-receipt-btn' onclick='redirectDownload({$row['booking_id']})'>Download Receipt</button>";
         } else {
-            echo "<p>No bookings found.</p>";
+            // echo "<p>No bookings found.</p>";
         }
         ?>
 
     </main>
+
+    <script>
+        function redirectDownload(bookingID) {
+            // Redirect to the receipt.php script with the booking ID
+            window.location.href = 'receipt.php?booking_id=' + bookingID;
+        }
+    </script>
 
 </body>
 

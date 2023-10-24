@@ -1,39 +1,45 @@
 <?php
-if (isset($_GET['booking_id'])) {
-    $bookingID = $_GET['booking_id'];
+// Include the necessary database connection code if not already included
+require __DIR__ . "/../includes/db.php";
 
-    // Connect Database
-    require __DIR__ . "/../includes/db.php";
+// Check if the user is logged in
+session_start();
+if (!isset($_SESSION['user_id'])) {
+    header("Location: ../pages/login.php");
+    exit();
+}
 
-    // Create a SQL query to fetch booking details for the given booking ID
-    $query = "SELECT * FROM bookings_table WHERE booking_id = $bookingID";
-    $result = mysqli_query($connection, $query);
+// Set the content type and headers to force the download
+header("Content-type: text/plain");
+header("Content-Disposition: attachment; filename=booking_receipt.txt");
 
-    if ($result && mysqli_num_rows($result) > 0) {
-        $row = mysqli_fetch_assoc($result); // Fetch the booking details
+// Retrieve the user's booking information
+$userId = $_SESSION['user_id'];
+$query = "SELECT * FROM bookings_table WHERE user_id = $userId";
+$result = mysqli_query($connection, $query);
 
-        // Construct the receipt content
-        $receiptContent = "Booking Name: " . $row['firstName'] . $row['surname'] . "\n";
-        $receiptContent = "Booking ID: " . $row['booking_id'] . "\n";
-        $receiptContent .= "Hotel Name: " . $row['hotel_name'] . "\n";
-        $receiptContent .= "Room Type: " . $row['room_type'] . "\n";
-        $receiptContent .= "Check-in Date: " . $row['check_in_date'] . "\n";
-        $receiptContent .= "Check-out Date: " . $row['check_out_date'] . "\n";
-        $receiptContent .= "Cost Per Night: ZAR " . $row['cost_per_night'] . "\n";
-        $receiptContent .= "Total Cost: ZAR " . $row['total_cost'] . "\n";
+if (mysqli_num_rows($result) > 0) {
+    // Create a variable to store the formatted content
+    $content = "Booking Receipt\n\n";
 
-        // Set the content type to force download as .txt
-        header('Content-Type: text/plain');
-        header('Content-Disposition: attachment; filename="receipt.txt');
-
-        // Output the receipt content
-        echo $receiptContent;
-    } else {
-        echo "Booking not found or no results.";
+    while ($row = mysqli_fetch_assoc($result)) {
+        // Format each booking entry
+        $content .= "Booking ID: {$row['booking_id']}\n";
+        $content .= "Hotel Name: {$row['hotel_name']}\n";
+        $content .= "Room Type: {$row['room_type']}\n";
+        $content .= "Check-in Date: {$row['check_in_date']}\n";
+        $content .= "Check-out Date: {$row['check_out_date']}\n";
+        $content .= "Cost Per Night: ZAR {$row['cost_per_night']}\n";
+        $content .= "Cost Per Night (Including VAT): ZAR {$row['Inc_Vat']}\n";
+        $content .= "Booking Total: ZAR {$row['total_cost']}\n\n";
     }
 
-    // Close the database connection
-    mysqli_close($connection);
+    // Output the content to the response, which will trigger the download
+    echo $content;
 } else {
-    echo "Invalid booking ID.";
+    // Handle the case where no bookings are found
+    echo "No bookings found.";
 }
+
+// Close the database connection
+mysqli_close($connection);
